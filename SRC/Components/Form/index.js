@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { View,Text,TextInput,Button } from "react-native";
+import ResultImc from "./ResultImc";
 
 export  default function Form(){
 
@@ -9,6 +10,9 @@ export  default function Form(){
     const[imc,setImc] = useState(null)
     const[textButton,setTextButton] = useState("Calcular IMC")
 
+    function imccalculator(){
+        return setImc((weight/(height*height)).toFixed())
+    }
 
     return(
         <View>
